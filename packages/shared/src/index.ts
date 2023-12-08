@@ -7,8 +7,10 @@ export interface Options {
   },
 }
 
+export interface ObjectImportPluginOptions { ignore: string[] }
 export type importPluginOptions =
   | boolean
+  | ObjectImportPluginOptions
   // | ((source: string, importer: string, isVuetify: boolean) => boolean | null | replace)
 // type replace = { symbol: string, from: string, as?: string }
 
