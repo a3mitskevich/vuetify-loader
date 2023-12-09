@@ -15,8 +15,9 @@
     "url": "git+https://github.com/vuetifyjs/vuetify-loader.git"
   },
   "scripts": {
-    "build": "unbuild",
-    "dev": "unbuild --stub"
+    "generate-types": "tsx generate-ignore-types.ts",
+    "build": "yarn generate-types && unbuild",
+    "dev": "yarn generate-types && unbuild --stub"
   },
   "author": "Kael Watts-Deuchar",
   "license": "MIT",
@@ -31,6 +32,9 @@
   "peerDependencies": {
     "vue": "^3.0.0",
     "vuetify": "^3.0.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.6.2"
   },
   "files": [
     "dist/"

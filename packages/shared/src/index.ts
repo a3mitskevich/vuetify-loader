@@ -1,4 +1,5 @@
 import * as path from 'upath'
+import { ImportIgnoreToken } from "./importIgnoreToken";
 
 export interface Options {
   autoImport?: importPluginOptions,
@@ -7,7 +8,7 @@ export interface Options {
   },
 }
 
-export interface ObjectImportPluginOptions { ignore: string[] }
+export interface ObjectImportPluginOptions { ignore: ImportIgnoreToken[] }
 export type importPluginOptions =
   | boolean
   | ObjectImportPluginOptions
